@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/chenxiaokai/Downloads/github/APTProject-master/apt-lib/build/libs/apt-lib.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fd8cda85966fea3405805afe95d682426569014">
+        <dex dex="/Users/chenxiaokai/Downloads/github/APTProject-master/app/build/intermediates/pre-dexed/release/apt-lib_7ce17ab55a776a8d7eac5a5aaf664c3b49e7b58f.jar" />
+    </item>
+
+</items>
