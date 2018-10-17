@@ -27,6 +27,8 @@ import javax.lang.model.util.Elements;
 import javax.lang.model.util.Types;
 import javax.tools.Diagnostic;
 
+//demo 描述地址：https://blog.csdn.net/hj7jay/article/details/52180023
+
 @AutoService(Processor.class)
 public class FactoryProcessor extends AbstractProcessor{
 

@@ -23,6 +23,7 @@ import javax.lang.model.util.Types;
 import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 
+//demo 描述地址：https://www.jianshu.com/p/07ef8ba80562
 @AutoService(Processor.class)
 public class MyProcessor extends AbstractProcessor{
 
