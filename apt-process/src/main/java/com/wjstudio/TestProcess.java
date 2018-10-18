@@ -1,6 +1,7 @@
 package com.wjstudio;
 
 import com.example.AutoCreat;
+import com.example.ZyaoAnnotation;
 import com.google.auto.service.AutoService;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
@@ -13,6 +14,7 @@ import java.util.Set;
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
+import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 
@@ -68,6 +70,14 @@ public class TestProcess extends AbstractProcessor {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        for (Element annotatedElement : roundEnv.getElementsAnnotatedWith(ZyaoAnnotation.class)) {
+            //遍历annotatedElement 中的字段 和 方法
+            for (Element element : annotatedElement.getEnclosedElements()) {
+                System.out.println("---------TestProcess----------> element = "+element.getSimpleName()+" className = "+element.toString());
+            }
+        }
+
         return false;
     }
 }

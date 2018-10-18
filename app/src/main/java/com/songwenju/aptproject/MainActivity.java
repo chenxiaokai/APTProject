@@ -18,8 +18,10 @@ import com.songwenju.aptproject.pizza.MealFactory;
 )
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+    private Meal meal;
+    private int sum = 10;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -36,5 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
         //通过注解生成工厂类
         Meal meal = MealFactory.create("Tiramisu");
+    }
+
+    private void test1() {
+
+    }
+
+    public int test2(int sum2) {
+
+        return sum2+10;
     }
 }
