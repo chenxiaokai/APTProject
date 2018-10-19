@@ -73,8 +73,17 @@ public class TestProcess extends AbstractProcessor {
 
         for (Element annotatedElement : roundEnv.getElementsAnnotatedWith(ZyaoAnnotation.class)) {
             //遍历annotatedElement 中的字段 和 方法
+            /*
+            ---------TestProcess----------> element = <init> className = MainActivity()  CONSTRUCTOR  ()void
+            ---------TestProcess----------> element = meal className = meal  FIELD  com.songwenju.aptproject.pizza.Meal
+            ---------TestProcess----------> element = sum className = sum  FIELD  int
+            ---------TestProcess----------> element = onCreate className = onCreate(android.os.Bundle)  METHOD  (android.os.Bundle)void
+            ---------TestProcess----------> element = test1 className = test1()  METHOD  ()void
+            ---------TestProcess----------> element = test2 className = test2(int)  METHOD  (int)int
+             */
             for (Element element : annotatedElement.getEnclosedElements()) {
-                System.out.println("---------TestProcess----------> element = "+element.getSimpleName()+" className = "+element.toString());
+                System.out.println("---------TestProcess----------> element = "+element.getSimpleName()+" className = "+element.toString()
+                +"  "+element.getKind().toString() +"  "+element.asType().toString());
             }
         }
 

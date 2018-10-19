@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.AutoCreat;
+import com.example.Autowired;
 import com.example.ZyaoAnnotation;
+import com.songwenju.aptproject.bean.Author;
 import com.songwenju.aptproject.pizza.Meal;
 import com.zyao89.demoprocessor.auto.Zyao$$ZYAO;
 import com.songwenju.aptproject.pizza.MealFactory;
@@ -20,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
     private Meal meal;
     private int sum = 10;
+
+    @Autowired
+    String bookName;
+
+    @Autowired
+    Author author;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
